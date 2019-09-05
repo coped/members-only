@@ -1,24 +1,9 @@
-# README
+# Members Only
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### About
+This is an exclusive clubhouse where everyone talks smack about each other. Thing is, you can't see *who's* talking smack unless you're a member.
 
-Things you may want to cover:
+This project is an exercise in basic Rails authentication and authorization, and is part of The Odin Project's [curriculum](https://www.theodinproject.com).
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Author
+Dennis Cope, https://www.coped.dev
