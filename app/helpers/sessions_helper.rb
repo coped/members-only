@@ -15,7 +15,7 @@ module SessionsHelper
             @current_user ||= User.find_by(id: session[:user_id])
         elsif cookies.signed[:remember_token]
             @current_user = User.find_by(remember_digest: 
-                                           User.digest(cookies.signed[:remember_token]))
+                                         User.digest(cookies.signed[:remember_token]))
             session[:user_id] = @current_user.id
         else
             nil
