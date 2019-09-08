@@ -1,4 +1,5 @@
 <%= provide(:title, "New Post") %>
+<h1 class="title">New post</h1>
 <% if @post.errors.any? %>
     <p>Post could not be made because:</p>
     <ul>
@@ -7,10 +8,7 @@
         <% end %>
     </ul>
 <% end %>
-    
-
 <%= form_for(@post, url: posts_path) do |f| %>
-
     <%= f.label :title %>
     <%= f.text_field :title %>
 

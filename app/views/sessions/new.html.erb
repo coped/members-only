@@ -1,5 +1,5 @@
 <%= provide(:title, "Log in") %>
-<h1>Log in</h1>
+<h1 class="title">Log in</h1>
 <%= form_for(:session, url: login_path) do |f| %>
 
     <%= f.label :email %>
@@ -10,3 +10,7 @@
 
     <%= f.submit :submit %>
 <% end %>
+<br><br>
+<p>To observe the authorization feature, try the following credentials:</p>
+<p class="is-size-6">email: bob@foobar.com</p>
+<p class="is-size-6">password: foobar</p>

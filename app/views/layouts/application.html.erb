@@ -7,17 +7,26 @@
 
     <% # For bulma styling %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div class="container">
       <%= render 'layouts/header' %>
-      <% flash.each do |type, message| %>
-        <p><%= message %></p>
-      <% end %>
-      <%= yield %>
-    <%= debug(params) if Rails.env.development? %>
+        <div class="center">
+          <% flash.each do |type, message| %>
+            <span class="tag is-<%= type %> is-medium">
+              <p><%= message %></p>
+            </span>
+          <% end %>
+          <%= yield %>
+        </div>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
   </body>
 </html>
