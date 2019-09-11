@@ -10,12 +10,15 @@
                 </div>
                 <div class="message-body">
                     <p><%= post.body %></p>
-                    <% if logged_in? %>
-                        <% @user = User.find(post.user_id) %>
-                        <p><em>By: <%= @user.name %></em></p>
-                    <% end %>
+                    <div class="author is-italic"
+                        <% if logged_in? %>
+                            <% @user = User.find(post.user_id) %>
+                            <p>By: <%= @user.name %></p>
+                        <% end %>
+                    </div
                 </div>
             </article>
+            <br>
         </li>
     <% end %>
 </ul>
